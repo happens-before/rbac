@@ -1,7 +1,9 @@
 package com.xupt.edu.rbac.mapper;
 
-import com.how2java.pojo.Role;
-import com.how2java.pojo.RoleExample;
+
+import com.xupt.edu.rbac.pojo.Role;
+import com.xupt.edu.rbac.pojo.RoleExample;
+
 import java.util.List;
 
 public interface RoleMapper {

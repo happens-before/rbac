@@ -1,14 +1,14 @@
 package com.xupt.edu.rbac.controller;
 
-import java.util.List;
 
+import com.xupt.edu.rbac.pojo.Permission;
+import com.xupt.edu.rbac.service.PermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.how2java.pojo.Permission;
-import com.how2java.service.PermissionService;
+import java.util.List;
 
 @Controller
 @RequestMapping("config")

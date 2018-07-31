@@ -1,7 +1,10 @@
 package com.xupt.edu.rbac.mapper;
 
-import com.how2java.pojo.User;
-import com.how2java.pojo.UserExample;
+
+
+import com.xupt.edu.rbac.pojo.User;
+import com.xupt.edu.rbac.pojo.UserExample;
+
 import java.util.List;
 
 public interface UserMapper {

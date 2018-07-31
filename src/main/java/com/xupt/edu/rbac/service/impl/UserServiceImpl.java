@@ -1,15 +1,15 @@
 package com.xupt.edu.rbac.service.impl;
 
-import java.util.List;
 
+import com.xupt.edu.rbac.mapper.UserMapper;
+import com.xupt.edu.rbac.pojo.User;
+import com.xupt.edu.rbac.pojo.UserExample;
+import com.xupt.edu.rbac.service.UserRoleService;
+import com.xupt.edu.rbac.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.how2java.mapper.UserMapper;
-import com.how2java.pojo.User;
-import com.how2java.pojo.UserExample;
-import com.how2java.service.UserRoleService;
-import com.how2java.service.UserService;
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {

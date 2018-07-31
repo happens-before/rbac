@@ -1,16 +1,15 @@
 package com.xupt.edu.rbac.service.impl;
 
-import java.util.List;
 
+import com.xupt.edu.rbac.mapper.RolePermissionMapper;
+import com.xupt.edu.rbac.pojo.Role;
+import com.xupt.edu.rbac.pojo.RolePermission;
+import com.xupt.edu.rbac.pojo.RolePermissionExample;
+import com.xupt.edu.rbac.service.RolePermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.how2java.mapper.RolePermissionMapper;
-import com.how2java.pojo.Permission;
-import com.how2java.pojo.Role;
-import com.how2java.pojo.RolePermission;
-import com.how2java.pojo.RolePermissionExample;
-import com.how2java.service.RolePermissionService;
+import java.util.List;
 
 @Service
 public class RolePermissionServiceImpl implements RolePermissionService {

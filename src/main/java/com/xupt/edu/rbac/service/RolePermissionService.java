@@ -1,6 +1,7 @@
 package com.xupt.edu.rbac.service;
 
-import com.how2java.pojo.Role;
+
+import com.xupt.edu.rbac.pojo.Role;
 
 public interface RolePermissionService {
 	public void setPermissions(Role role, long[] permissionIds);

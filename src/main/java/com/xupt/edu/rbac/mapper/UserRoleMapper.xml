@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.how2java.mapper.UserRoleMapper">
-  <resultMap id="BaseResultMap" type="com.how2java.pojo.UserRole">
+<mapper namespace="com.xupt.edu.rbac.mapper.UserRoleMapper">
+  <resultMap id="BaseResultMap" type="com.xupt.edu.rbac.pojo.UserRole">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="uid" jdbcType="BIGINT" property="uid" />
     <result column="rid" jdbcType="BIGINT" property="rid" />
@@ -38,7 +38,7 @@
   <sql id="Base_Column_List">
     id, uid, rid
   </sql>
-  <select id="selectByExample" parameterType="com.how2java.pojo.UserRoleExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.xupt.edu.rbac.pojo.UserRoleExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -63,11 +63,11 @@
     delete from user_role
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.how2java.pojo.UserRole" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.xupt.edu.rbac.pojo.UserRole" useGeneratedKeys="true">
     insert into user_role (uid, rid)
     values (#{uid,jdbcType=BIGINT}, #{rid,jdbcType=BIGINT})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.how2java.pojo.UserRole" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.xupt.edu.rbac.pojo.UserRole" useGeneratedKeys="true">
     insert into user_role
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="uid != null">
@@ -86,7 +86,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.how2java.pojo.UserRole">
+  <update id="updateByPrimaryKeySelective" parameterType="com.xupt.edu.rbac.pojo.UserRole">
     update user_role
     <set>
       <if test="uid != null">
@@ -98,7 +98,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.how2java.pojo.UserRole">
+  <update id="updateByPrimaryKey" parameterType="com.xupt.edu.rbac.pojo.UserRole">
     update user_role
     set uid = #{uid,jdbcType=BIGINT},
       rid = #{rid,jdbcType=BIGINT}

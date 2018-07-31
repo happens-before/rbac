@@ -1,22 +1,18 @@
 package com.xupt.edu.rbac.service.impl;
 
+
+import com.xupt.edu.rbac.mapper.RoleMapper;
+import com.xupt.edu.rbac.mapper.UserRoleMapper;
+import com.xupt.edu.rbac.pojo.*;
+import com.xupt.edu.rbac.service.RoleService;
+import com.xupt.edu.rbac.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import com.how2java.mapper.RoleMapper;
-import com.how2java.mapper.UserRoleMapper;
-import com.how2java.pojo.Role;
-import com.how2java.pojo.RoleExample;
-import com.how2java.pojo.User;
-import com.how2java.pojo.UserRole;
-import com.how2java.pojo.UserRoleExample;
-import com.how2java.service.RoleService;
-import com.how2java.service.UserService;
 
 @Service
 public class RoleServiceImpl implements RoleService {

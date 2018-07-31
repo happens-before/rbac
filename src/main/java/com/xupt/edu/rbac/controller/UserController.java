@@ -1,9 +1,11 @@
 package com.xupt.edu.rbac.controller;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
+import com.xupt.edu.rbac.pojo.Role;
+import com.xupt.edu.rbac.pojo.User;
+import com.xupt.edu.rbac.service.RoleService;
+import com.xupt.edu.rbac.service.UserRoleService;
+import com.xupt.edu.rbac.service.UserService;
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +13,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.how2java.pojo.Role;
-import com.how2java.pojo.User;
-import com.how2java.service.RoleService;
-import com.how2java.service.UserRoleService;
-import com.how2java.service.UserService;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("config")

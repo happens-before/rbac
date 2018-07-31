@@ -1,6 +1,7 @@
 package com.xupt.edu.rbac.service;
 
-import com.how2java.pojo.User;
+
+import com.xupt.edu.rbac.pojo.User;
 
 public interface UserRoleService {
 

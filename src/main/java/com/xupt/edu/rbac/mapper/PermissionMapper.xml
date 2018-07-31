@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.how2java.mapper.PermissionMapper">
-  <resultMap id="BaseResultMap" type="com.how2java.pojo.Permission">
+<mapper namespace="com.xupt.edu.rbac.mapper.PermissionMapper">
+  <resultMap id="BaseResultMap" type="com.xupt.edu.rbac.pojo.Permission">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="desc_" jdbcType="VARCHAR" property="desc_" />
@@ -39,7 +39,7 @@
   <sql id="Base_Column_List">
     id, name, desc_, url
   </sql>
-  <select id="selectByExample" parameterType="com.how2java.pojo.PermissionExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.xupt.edu.rbac.pojo.PermissionExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -64,13 +64,13 @@
     delete from permission
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.how2java.pojo.Permission" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.xupt.edu.rbac.pojo.Permission" useGeneratedKeys="true">
     insert into permission (name, desc_, url
       )
     values (#{name,jdbcType=VARCHAR}, #{desc_,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.how2java.pojo.Permission" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.xupt.edu.rbac.pojo.Permission" useGeneratedKeys="true">
     insert into permission
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="name != null">
@@ -95,7 +95,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.how2java.pojo.Permission">
+  <update id="updateByPrimaryKeySelective" parameterType="com.xupt.edu.rbac.pojo.Permission">
     update permission
     <set>
       <if test="name != null">
@@ -110,7 +110,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.how2java.pojo.Permission">
+  <update id="updateByPrimaryKey" parameterType="com.xupt.edu.rbac.pojo.Permission">
     update permission
     set name = #{name,jdbcType=VARCHAR},
       desc_ = #{desc_,jdbcType=VARCHAR},

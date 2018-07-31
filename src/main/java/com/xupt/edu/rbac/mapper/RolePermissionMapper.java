@@ -1,7 +1,9 @@
 package com.xupt.edu.rbac.mapper;
 
-import com.how2java.pojo.RolePermission;
-import com.how2java.pojo.RolePermissionExample;
+
+import com.xupt.edu.rbac.pojo.RolePermission;
+import com.xupt.edu.rbac.pojo.RolePermissionExample;
+
 import java.util.List;
 
 public interface RolePermissionMapper {

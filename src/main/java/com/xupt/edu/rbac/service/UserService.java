@@ -1,7 +1,10 @@
 package com.xupt.edu.rbac.service;
 
+
+
+import com.xupt.edu.rbac.pojo.User;
+
 import java.util.List;
-import com.how2java.pojo.User;
 
 public interface UserService {
 	public String getPassword(String name);

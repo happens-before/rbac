@@ -1,23 +1,19 @@
 package com.xupt.edu.rbac.service.impl;
 
+
+import com.xupt.edu.rbac.mapper.PermissionMapper;
+import com.xupt.edu.rbac.mapper.RolePermissionMapper;
+import com.xupt.edu.rbac.pojo.*;
+import com.xupt.edu.rbac.service.PermissionService;
+import com.xupt.edu.rbac.service.RoleService;
+import com.xupt.edu.rbac.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import com.how2java.mapper.PermissionMapper;
-import com.how2java.mapper.RolePermissionMapper;
-import com.how2java.pojo.Permission;
-import com.how2java.pojo.PermissionExample;
-import com.how2java.pojo.Role;
-import com.how2java.pojo.RolePermission;
-import com.how2java.pojo.RolePermissionExample;
-import com.how2java.service.PermissionService;
-import com.how2java.service.RoleService;
-import com.how2java.service.UserService;
 
 @Service
 public class PermissionServiceImpl implements PermissionService {

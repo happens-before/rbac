@@ -1,10 +1,11 @@
 package com.xupt.edu.rbac.service;
 
+
+import com.xupt.edu.rbac.pojo.Permission;
+import com.xupt.edu.rbac.pojo.Role;
+
 import java.util.List;
 import java.util.Set;
-
-import com.how2java.pojo.Permission;
-import com.how2java.pojo.Role;
 
 public interface PermissionService {
 	public Set<String> listPermissions(String userName);

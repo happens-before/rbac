@@ -1,10 +1,11 @@
 package com.xupt.edu.rbac.service;
 
+
+import com.xupt.edu.rbac.pojo.Role;
+import com.xupt.edu.rbac.pojo.User;
+
 import java.util.List;
 import java.util.Set;
-
-import com.how2java.pojo.Role;
-import com.how2java.pojo.User;
 
 public interface RoleService {
 	public Set<String> listRoleNames(String userName);

@@ -1,7 +1,9 @@
 package com.xupt.edu.rbac.mapper;
 
-import com.how2java.pojo.Permission;
-import com.how2java.pojo.PermissionExample;
+
+import com.xupt.edu.rbac.pojo.Permission;
+import com.xupt.edu.rbac.pojo.PermissionExample;
+
 import java.util.List;
 
 public interface PermissionMapper {

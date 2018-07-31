@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.how2java.mapper.RoleMapper">
-  <resultMap id="BaseResultMap" type="com.how2java.pojo.Role">
+<mapper namespace="com.xupt.edu.rbac.mapper.RoleMapper">
+  <resultMap id="BaseResultMap" type="com.xupt.edu.rbac.pojo.Role">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="desc_" jdbcType="VARCHAR" property="desc_" />
@@ -38,7 +38,7 @@
   <sql id="Base_Column_List">
     id, name, desc_
   </sql>
-  <select id="selectByExample" parameterType="com.how2java.pojo.RoleExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.xupt.edu.rbac.pojo.RoleExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -63,11 +63,11 @@
     delete from role
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.how2java.pojo.Role" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.xupt.edu.rbac.pojo.Role" useGeneratedKeys="true">
     insert into role (name, desc_)
     values (#{name,jdbcType=VARCHAR}, #{desc_,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.how2java.pojo.Role" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.xupt.edu.rbac.pojo.Role" useGeneratedKeys="true">
     insert into role
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="name != null">
@@ -86,7 +86,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.how2java.pojo.Role">
+  <update id="updateByPrimaryKeySelective" parameterType="com.xupt.edu.rbac.pojo.Role">
     update role
     <set>
       <if test="name != null">
@@ -98,7 +98,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.how2java.pojo.Role">
+  <update id="updateByPrimaryKey" parameterType="com.xupt.edu.rbac.pojo.Role">
     update role
     set name = #{name,jdbcType=VARCHAR},
       desc_ = #{desc_,jdbcType=VARCHAR}

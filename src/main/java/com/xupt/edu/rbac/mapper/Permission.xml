@@ -3,7 +3,7 @@
 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-	<mapper namespace="com.how2java.mapper.PermissionMapper">
+	<mapper namespace="com.xupt.edu.rbac.mapper.PermissionMapper">
 	    <select id="listPermissionsByUserName"  parameterType="string" resultType="Permission">
 			select p.id, p.name from user u 
 				left join user_role ru 

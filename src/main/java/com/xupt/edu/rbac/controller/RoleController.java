@@ -1,20 +1,19 @@
 package com.xupt.edu.rbac.controller;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
+import com.xupt.edu.rbac.pojo.Permission;
+import com.xupt.edu.rbac.pojo.Role;
+import com.xupt.edu.rbac.service.PermissionService;
+import com.xupt.edu.rbac.service.RolePermissionService;
+import com.xupt.edu.rbac.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.how2java.pojo.Permission;
-import com.how2java.pojo.Role;
-import com.how2java.service.PermissionService;
-import com.how2java.service.RolePermissionService;
-import com.how2java.service.RoleService;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("config")
