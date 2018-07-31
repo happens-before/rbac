@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+	<mapper namespace="com.how2java.mapper.PermissionMapper">
+	    <select id="listPermissionsByUserName"  parameterType="string" resultType="Permission">
+			select p.id, p.name from user u 
+				left join user_role ru 
+					on u.id = ru.uid left 
+				join role r 
+					on r.id = ru.rid 
+				left join role_permission rp 
+					on r.id = rp.rid 
+				left join permission p 
+					on p.id = rp.pid 
+			where u.name =#{0}
+	    </select>
+	</mapper>
+
