@@ -17,17 +17,13 @@ import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * @author: zhaowanyue
- * @date: 2018/7/31
- * @description:
- */
 @Configuration
 public class ShiroConfiguration {
     @Bean
     public static LifecycleBeanPostProcessor getLifecycleBeanPostProcessor() {
         return new LifecycleBeanPostProcessor();
     }
+
 
     /**
      * ShiroFilterFactoryBean 处理拦截资源文件问题。
@@ -106,6 +102,7 @@ public class ShiroConfiguration {
 
         return hashedCredentialsMatcher;
     }
+
 
     /**
      *  开启shiro aop注解支持.

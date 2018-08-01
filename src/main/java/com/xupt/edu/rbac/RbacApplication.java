@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-@MapperScan(basePackages = "com.xuot.edu.rbac.mapper")
+@MapperScan(basePackages = "com.xupt.edu.rbac.mapper")
 public class RbacApplication {
 
 	public static void main(String[] args) {
