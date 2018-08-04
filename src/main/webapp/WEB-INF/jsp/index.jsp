@@ -30,6 +30,7 @@
 			<a href="listStudio">查看演出厅</a><br>
 			<br><br>
 		</div>
+
 		<div>
 			<a href="deletePlay">删除演出剧目</a><br>
 			<a href="addPlay">增加演出剧目</a><br>
@@ -64,9 +65,7 @@
 			<a href="sumSaleRecord">统计销售额</a><br>
 			<a href="listSaleRecord">查看销售额</a><br>
 		</div>
-
 </div>
-
 </div>
 </body>
 </html>

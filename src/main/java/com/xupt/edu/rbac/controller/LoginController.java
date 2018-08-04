@@ -15,9 +15,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class LoginController {
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(Model model, String name, String password) {
+		//1.获取当前的Subject，调用SecurityUtils.getSubject();
 		Subject subject = SecurityUtils.getSubject();
+		//2.把用户名和密码封装为UsernamePasswordToken对象
 		UsernamePasswordToken token = new UsernamePasswordToken(name, password);
 		try {
+			//3.执行登陆
 			subject.login(token);
 			Session session = subject.getSession();
 			session.setAttribute("subject", subject);

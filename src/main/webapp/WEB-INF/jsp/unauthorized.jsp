@@ -8,10 +8,6 @@
 
  
 <div class="workingroom">
-
-	
-	
-
 	权限不足,具体原因：${ex.message}
 	<br>
 	<a href="#" onClick="javascript:history.back()">返回</a>
