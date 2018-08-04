@@ -6,11 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.web.WebApplicationInitializer;
 
 @ServletComponentScan
 @SpringBootApplication
 @MapperScan(basePackages = "com.xupt.edu.rbac.mapper")
-public class RbacApplication extends SpringBootServletInitializer {
+public class RbacApplication extends SpringBootServletInitializer implements WebApplicationInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
