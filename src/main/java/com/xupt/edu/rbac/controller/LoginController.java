@@ -29,6 +29,7 @@ public class LoginController {
 		} catch (AuthenticationException e) {
 			model.addAttribute("error", "验证失败");
 			return "login";
+
 		}
 	}
 
